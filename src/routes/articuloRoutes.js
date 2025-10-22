@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router(); //manejador de rutas de express
-const articulolSchema = require("../models/articulolModels");
+const articuloSchema = require("../models/articuloModels");
 //crear articulo
 router.post("/articulos", (req, res) => {
     const articulo = articuloSchema(req.body);
