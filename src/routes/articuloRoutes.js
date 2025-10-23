@@ -29,8 +29,7 @@ router.get("/articulos/:id", (req, res) => {
 router.put("/articulos/:id", (req, res) => {
   const { id } = req.params;
   const { 
-    titulo, autores, año_de_publicación, resumen, 
-    cantidad_referencias, nombre_bases_de_datos_consultada, nombre_revista, enlace
+    titulo, autores, año_de_publicación, fecha, resumen, cantidad_referencias, nombre_bases_de_datos_consultada, nombre_revista, enlace
   } = req.body;
 
   articuloSchema
@@ -38,8 +37,8 @@ router.put("/articulos/:id", (req, res) => {
       { _id: id },
       { 
         $set: { 
-          titulo, autores, año_de_publicación, resumen, 
-          cantidad_referencias, nombre_base_de_datos, nombre_revista, enlace, 
+          titulo, autores, año_de_publicación, fecha, resumen, 
+          cantidad_referencias, nombre_bases_de_datos_consultada, nombre_revista, enlace, 
         } 
       }
     )
