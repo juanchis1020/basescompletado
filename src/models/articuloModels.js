@@ -1,5 +1,5 @@
 const mongoose = require("mongoose"); // importando el componente mogoose
-const animalSchema = mongoose.Schema({
+const articuloSchema = mongoose.Schema({
   titulo: {
     type: String,
     required: true,
@@ -37,4 +37,5 @@ const animalSchema = mongoose.Schema({
     required: true,
   }
 });
-module.exports = mongoose.model("Animal", animalSchema);
+module.exports = mongoose.model("articulo", articuloSchema);
+
